@@ -16,7 +16,7 @@
             <a href="javascript:window.open('https://google.co.jp/')">window.open</a>
         </li>
         <li>
-            <a href="javascript:void(0)" onclick="visit()">window.open empty 2</a>
+            <a href="javascript:void(0)" onclick="visit()">window.open empty 3</a>
         </li>
     </ul>
     <script type="text/javascript">
@@ -25,7 +25,7 @@
                 window.open('', 'test', '');
             }
             catch (e) {
-                alert(e);
+                alert(e.name + "\n" + e.message);
             }
         }
     </script>
