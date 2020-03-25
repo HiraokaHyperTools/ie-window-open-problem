@@ -16,10 +16,19 @@
             <a href="javascript:window.open('https://google.co.jp/')">window.open</a>
         </li>
         <li>
-            <a href="javascript:void(0)" onclick="window.open('', 'test', '')">window.open empty</a>
+            <a href="javascript:void(0)" onclick="visit()">window.open empty 2</a>
         </li>
     </ul>
-
+    <script type="text/javascript">
+        function visit() {
+            try {
+                window.open('', 'test', '');
+            }
+            catch (e) {
+                alert(e);
+            }
+        }
+    </script>
 </body>
 
 </html>
