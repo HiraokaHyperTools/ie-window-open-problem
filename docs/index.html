@@ -8,38 +8,27 @@
 <body>
     <h1>IE window.open problem?</h1>
 
+    <h2>Checker</h2>
+
     <ul>
         <li>
-            <a href="https://google.co.jp/" target="_blank">a href</a>
-        </li>
-        <li>
-            <a href="javascript:void(0)" onclick="openOne()">window.open 1</a>
-        </li>
-        <li>
-            <a href="javascript:void(0)" onclick="openThree()">window.open empty 5</a>
+            Try <a href="javascript:void(0)" onclick="tryIt()"><code>window.open('');</code></a>
         </li>
     </ul>
+
+    <p>Note: If you have problem opening above link, you can <a
+            href="https://github.com/HiraokaHyperTools/ie-window-open-problem/">check</a>
+        this.</p>
+
     <script type="text/javascript">
-        function openOne() {
+        function tryIt() {
             try {
                 window.open('');
             }
             catch (e) {
                 alert(e.name + "\n" + e.message);
-                if (console && console.log) {
-                    console.log(e);
-                }
-            }
-        }
-
-        function openThree() {
-            try {
-                window.open('', 'test', '');
-            }
-            catch (e) {
-                alert(e.name + "\n" + e.message);
-                if (console && console.log) {
-                    console.log(e);
+                if (window.console && window.console.log) {
+                    window.console.log(e);
                 }
             }
         }
